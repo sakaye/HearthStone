@@ -2,16 +2,28 @@
 <html>
 <head>
 	<title>Hearthstone</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
-<h1> Random Card </h1>
+<h1>Random Card</h1>
 <div class="randomCard"></div>
+
+<h1>Find By Id Card</h1>
+<div class="findBy"></div>
+
+<h1>List all Cards</h1>
+<div id="card-list"></div>
 
 <!-- Add things like cost, health, damage -->
 <script id="fullCard" type="text/x-handlebars-template">
-	{{card.id}} -- {{card.name}} <br/>
-	<img src="cards/{{card.id}}.png"/>
+	<div class="card">
+    {{card.id}} -- {{card.name}} </br>
+    Cost: {{card.cost}} -- Type: {{card.type}} </br>
+    Abilities: {{card.abilities}} </br>
+    Usable by: {{#if card.hsClass}}{{card.hsClass}}{{else}} All {{/if}} </br>
+  	<img src="cards/{{card.id}}.png"/>
+  </div>
 </script>
 
 <script type="text/javascript" src="js/vendor/jquery.min.js"></script>

@@ -8,14 +8,17 @@ var Card = (function() {
 	function Card(data) {
 		this.id = data.id;
 		this.name = data.name;
-
-		//finish this with the rest of the js data
+		this.abilities = data.abilities;
+		this.rarity = data.rarity;
+		this.hsClass = data.class;
+		this.cost = data.cost;
+		this.type = data.type;
 	}
 
 	// prototype methods are able to use this syntax once an instance
 	// has been created. (new Card({id : 3, name: "Argent Commander"}))
 	Card.prototype.testOutput = function(){
-		return this.id + " - " + this.name;
+		return this.id + " - " + this.name + " - " + this.type;
 	};
 
 	Card.prototype.render = function(){
@@ -33,7 +36,7 @@ var Card = (function() {
 		//we will fill this card when we find the right id
 		var result;
 		//loop through and find the card with the correct id
-		for (var i = 0, len = window.cardData; i < len; i++){
+		for (var i = 0, len = window.cardData.length; i < len; i++){
 			var cd = window.cardData[i];
 			if (cd.id === cardId){
 				//found it set data and break out of loop
@@ -51,5 +54,26 @@ var Card = (function() {
 		return new Card(randomCardData);
 	};
 
+	Card.allCards = function(){
+		var Cards = [];
+		for (var i = 0, len = window.cardData.length; i < len; i++){
+			cd = window.cardData[i];
+			currentCard = new Card(cd);
+			Cards.push(currentCard);
+		}
+		return Cards;
+	}
+
 	return Card;
 })();
+
+
+
+
+
+
+
+
+
+
+

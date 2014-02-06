@@ -1,0 +1,9 @@
+h1 {
+  clear: both;
+}
+
+.card {
+  width: 200px;
+  height: 350px;
+  float: left;
+}
