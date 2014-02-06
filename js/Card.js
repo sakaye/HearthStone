@@ -6,10 +6,11 @@ var Card = (function() {
 	// or static calls and whenever "new Card({id : 3, name : 'test'})"
 	// gets called.
 	function Card(data) {
+		var rarities = ["Free","Common","Uncommon","Rare","Epic"];
 		this.id = data.id;
 		this.name = data.name;
 		this.abilities = data.abilities;
-		this.rarity = data.rarity;
+		this.rarity = rarities[data.rariety];
 		this.hsClass = data.class;
 		this.cost = data.cost;
 		this.type = data.type;

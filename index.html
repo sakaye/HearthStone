@@ -18,10 +18,11 @@
 <!-- Add things like cost, health, damage -->
 <script id="fullCard" type="text/x-handlebars-template">
 	<div class="card">
-    {{card.id}} -- {{card.name}} </br>
-    Cost: {{card.cost}} -- Type: {{card.type}} </br>
-    Abilities: {{card.abilities}} </br>
-    Usable by: {{#if card.hsClass}}{{card.hsClass}}{{else}} All {{/if}} </br>
+    {{card.id}} -- {{card.name}}</br>
+    Cost: {{card.cost}} -- Type: {{card.type}}</br>
+    Abilities: {{card.abilities}}</br>
+    Usable by: {{#if card.hsClass}}{{card.hsClass}}{{else}} All{{/if}}</br>
+    Rarity: {{card.rarity}}</br>
   	<img src="cards/{{card.id}}.png"/>
   </div>
 </script>
