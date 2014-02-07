@@ -14,7 +14,7 @@ var Card = (function() {
 		this.hsClass = data.class;
 		this.cost = data.cost;
 		this.type = data.type;
-	}
+	};
 
 	// prototype methods are able to use this syntax once an instance
 	// has been created. (new Card({id : 3, name: "Argent Commander"}))

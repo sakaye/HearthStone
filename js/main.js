@@ -7,8 +7,12 @@ var randomCard = Card.randomCard();
 var allCards = Card.allCards();
 // console.log(allCards);
 
-var find = Card.findById(4);
+var findCard = Card.findById(4);
 // console.log(find);
+
+var findHero = Hero.findById(3);
+console.log(findHero.testOutput());
+var allHeroes = Hero.allHeroes();
 
 //can check things on object
 console.log(randomCard.id);
@@ -16,11 +20,17 @@ console.log(randomCard.id);
 console.log(randomCard.testOutput());
 //render out to the page.
 $(".randomCard").html(randomCard.render());
+$(".findBy").html(findCard.render());
 
-$(".findBy").html(find.render());
+var heroHtml;
+for (var i = 0, len = allHeroes.length; i < len; i++){
+  heroHtml += allHeroes[i].render();
+}
+
+$(".portraits").html(heroHtml);
 
 var html;
-for (var i = 0, len = allCards.length; i < len; i++) {
+for (var i = 0, len = 10; i < len; i++) {
   html += allCards[i].render();
 };
 

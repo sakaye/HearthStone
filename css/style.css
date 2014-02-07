@@ -7,3 +7,121 @@ h1 {
   height: 350px;
   float: left;
 }
+
+.hero {
+  display: inline-block;
+  height: 127px;
+  position: relative;
+  top: 0;
+  vertical-align: top;
+  width: 111px;
+}
+
+.hero .portrait {
+  background-image: url(images/hero-portraits.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 85px;
+  left: 20px;
+  position: absolute;
+  top: 21px;
+  width: 72px;
+  z-index: 2;
+}
+
+.hero .portrait ~ .name {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #010101;
+  display: block;
+  font-family: "Palatino Linotype", "Times New Roman", Times, serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  padding: 0 10px;
+  position: absolute;
+  text-align: center;
+  top: 125px;
+  width: 100%;
+  -webkit-transition: color 0.25s ease;
+}
+
+.hero .portrait ~ .frame {
+  background-image: url("images/hero-frame.png");
+  background-repeat: no-repeat;
+  height: 127px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 111px;
+  z-index: 1;
+}
+
+.hero.Jaina .portrait {
+  background-position: 0 0;
+}
+.hero.Jaina.is-active .portrait, .hero.Jaina .portrait:hover {
+  background-position: 0 -85px;
+}
+
+.hero.Rexxar .portrait {
+  background-position: -72px 0;
+}
+.hero.Rexxar.is-active .portrait, .hero.Rexxar .portrait:hover {
+  background-position: -72px -85px;
+}
+
+.hero.Uther .portrait {
+  background-position: -144px 0;
+}
+.hero.Uther.is-active .portrait, .hero.Uther .portrait:hover {
+  background-position: -144px -85px;
+}
+
+.hero.Garrosh .portrait {
+  background-position: -216px 0;
+}
+.hero.Garrosh.is-active .portrait, .hero.Garrosh .portrait:hover {
+  background-position: -216px -85px;
+}
+
+.hero.Malfurion .portrait {
+  background-position: -288px 0;
+}
+.hero.Malfurion.is-active .portrait, .hero.Malfurion .portrait:hover {
+  background-position: -288px -85px;
+}
+
+.hero.GulDan .portrait {
+  background-position: -360px 0;
+}
+.hero.GulDan.is-active .portrait, .hero.GulDan .portrait:hover {
+  background-position: -360px -85px;
+}
+
+.hero.Anduin .portrait {
+  background-position: -504px 0;
+}
+.hero.Anduin.is-active .portrait, .hero.Anduin .portrait:hover {
+  background-position: -504px -85px;
+}
+
+.hero.Thrall .portrait {
+  background-position: -432px 0;
+}
+.hero.Thrall.is-active .portrait, .hero.Thrall .portrait:hover {
+  background-position: -432px -85px;
+}
+
+.hero.Valeera .portrait {
+  background-position: -576px 0;
+}
+.hero.Valeera.is-active .portrait, .hero.Valeera .portrait:hover {
+  background-position: -576px -85px;
+}
+
+
+
+
+
