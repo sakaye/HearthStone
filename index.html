@@ -6,11 +6,25 @@
 </head>
 <body>
 
-<h1>Choose your Hero!</h1>
-<div class="portraits"></div>
+<div class="container">
+  <h1>Name your Deck!</h1>
+  <label for="deckname">Deck Name:</label>
+  <input id="decknane" name="deckname" type="text">
+  
+  <h1>Choose your Hero!</h1>
+  <div class="portraits"></div>
 
-<h1>Cards</h1>
-<div id="card-list"></div>
+  <div id="deckbuilder">
+    <div id="cards">
+      <h1>Cards</h1>
+      <div id="card-list"></div>
+    </div>
+    <div id="deck">
+      <h1>Deck</h1>
+      <div id="decklist"></div>
+    </div>
+  </div>
+</div>
 
 
 <script id="fullCard" type="text/x-handlebars-template">
@@ -32,6 +46,7 @@
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/Card.js"></script>
 <script type="text/javascript" src="js/Hero.js"></script>
+<script type="text/javascript" src="js/Deck.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

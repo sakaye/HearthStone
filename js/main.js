@@ -1,11 +1,14 @@
+//variables
+var filteredCards, allCards, allHeroes, deck;
 
+deck = new Deck();
 
 //get all cards
 var allCards = Card.allCards();
 
 //render out all cards
 var cardHtml = '';
-for (var i = 0, len = allCards.length; i < len; i++) {
+for (var i = 0, len = 12; i < len; i++) {
   cardHtml += allCards[i].render();
 };
 
@@ -33,7 +36,7 @@ portraits.on("click", ".portrait", function(){
   $(this).parent(".hero").addClass("is-active");
 
   //filter cards based on hero selected
-  var filteredCards = Card.filterByHero(heroClass);
+  filteredCards = Card.filterByHero(heroClass);
 
   //render out all flitered cards
   var cardHtml = '';
@@ -41,6 +44,7 @@ portraits.on("click", ".portrait", function(){
     cardHtml += filteredCards[i].render();
   };
   $("#card-list").html(cardHtml);
+  return filteredCards;
 });
 
 

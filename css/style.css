@@ -2,12 +2,27 @@ h1 {
   clear: both;
 }
 
+.container {
+  width: 960px;
+  margin: auto;
+}
+
+#cards {
+  width: 696px;
+  display: inline-block;
+}
+
 .card {
   float: left;
 }
 
 .card img {
   cursor: pointer;
+}
+
+#deck {
+  width: 260px;
+  display: inline-block;
 }
 
 .hero {
