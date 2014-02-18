@@ -9,30 +9,19 @@
 <h1>Choose your Hero!</h1>
 <div class="portraits"></div>
 
-<h1>Random Card</h1>
-<div class="randomCard"></div>
-
-<h1>Find By Id Card</h1>
-<div class="findBy"></div>
-
-<h1>List all Cards</h1>
+<h1>Cards</h1>
 <div id="card-list"></div>
 
 
 <script id="fullCard" type="text/x-handlebars-template">
-	<div class="card">
-    {{card.id}} -- {{card.name}}</br>
-    Cost: {{card.cost}} -- Type: {{card.type}}</br>
-    Abilities: {{card.abilities}}</br>
-    Usable by: {{#if card.hsClass}}{{card.hsClass}}{{else}} All{{/if}}</br>
-    Rarity: {{card.rarity}}</br>
+	<div class="card" data-id="{{card.id}}">
   	<img src="cards/{{card.id}}.png"/>
   </div>
 </script>
 
 <script id="heroPortrait" type="text/x-handlebars-template">
   <div class="hero {{hero.name}}">
-    <div class="portrait"></div>
+    <div class="portrait" data-heroclass="{{hero.heroClass}}"></div>
     <p class="name">{{hero.name}}</p>
     <div class="frame"></div>
   </div>

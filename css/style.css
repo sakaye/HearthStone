@@ -3,9 +3,11 @@ h1 {
 }
 
 .card {
-  width: 200px;
-  height: 350px;
   float: left;
+}
+
+.card img {
+  cursor: pointer;
 }
 
 .hero {
@@ -14,7 +16,12 @@ h1 {
   position: relative;
   top: 0;
   vertical-align: top;
-  width: 111px;
+  width: 100px;
+  background-color: none;
+}
+
+.hero.is-active {
+  background-color: blue;
 }
 
 .hero .portrait {
@@ -22,7 +29,7 @@ h1 {
   background-repeat: no-repeat;
   cursor: pointer;
   height: 85px;
-  left: 20px;
+  left: 15px;
   position: absolute;
   top: 21px;
   width: 72px;
@@ -51,7 +58,7 @@ h1 {
   background-image: url("images/hero-frame.png");
   background-repeat: no-repeat;
   height: 127px;
-  left: 0;
+  left: -5px;
   position: absolute;
   top: 0;
   width: 111px;

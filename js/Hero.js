@@ -32,13 +32,13 @@ var Hero = (function() {
   };
 
   Hero.allHeroes = function(){
-    var Heroes = [];
+    var heroes = [];
     for (var i = 0, len = window.heroData.length; i < len; i++) {
       hero = window.heroData[i];
       heroObj = new Hero(hero);
-      Heroes.push(heroObj);
+      heroes.push(heroObj);
     }
-    return Heroes;
+    return heroes;
   }
 
   return Hero;

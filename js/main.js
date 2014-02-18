@@ -1,48 +1,55 @@
 
 
-//get a random card
-var randomCard = Card.randomCard();
-
 //get all cards
 var allCards = Card.allCards();
-// console.log(allCards);
 
-var findCard = Card.findById(4);
-// console.log(find);
+//render out all cards
+var cardHtml = '';
+for (var i = 0, len = allCards.length; i < len; i++) {
+  cardHtml += allCards[i].render();
+};
 
-var findHero = Hero.findById(3);
-console.log(findHero.testOutput());
+$("#card-list").html(cardHtml);
+
+
+//get all heroes
 var allHeroes = Hero.allHeroes();
 
-//can check things on object
-console.log(randomCard.id);
-//can call prototype methods on this instance
-console.log(randomCard.testOutput());
-//render out to the page.
-$(".randomCard").html(randomCard.render());
-$(".findBy").html(findCard.render());
-
-var heroHtml;
+//render out heroes
+var heroHtml = '';
 for (var i = 0, len = allHeroes.length; i < len; i++){
   heroHtml += allHeroes[i].render();
 }
+var portraits = $(".portraits");
+portraits.html(heroHtml);
 
-$(".portraits").html(heroHtml);
+//function to select a hero for a deck
+portraits.on("click", ".portrait", function(){
+  //get the hero's class
+  heroClass = $(this).data("heroclass");
 
-var html;
-for (var i = 0, len = 10; i < len; i++) {
-  html += allCards[i].render();
-};
+  //change background color so signal selected hero
+  portraits.find(".is-active").removeClass("is-active");
+  $(this).parent(".hero").addClass("is-active");
 
-$("#card-list").html(html);
+  //filter cards based on hero selected
+  var filteredCards = Card.filterByHero(heroClass);
 
-
-//creating with new syntax
-var customCard = new Card({
-	id : 1,
-	name : "Custom Card"
+  //render out all flitered cards
+  var cardHtml = '';
+  for (var i = 0, len = filteredCards.length; i < len; i++) {
+    cardHtml += filteredCards[i].render();
+  };
+  $("#card-list").html(cardHtml);
 });
 
-//can call prototype methods on this instance
-console.log(customCard.testOutput());
+
+
+
+
+
+
+
+
+
 
